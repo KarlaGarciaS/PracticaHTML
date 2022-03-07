@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria</title>
+
+    <style>
+        html{
+            box-sizing: border-box;  
+        }
+        header{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+        body{
+            background-color: rgba(243, 144, 144, 0.7);
+        }
+        .titulo{
+            text-align: center;
+        }
+        .contenedor{
+            max-width: 120rem;
+            margin: 0 auto 0 auto;
+        }
+        .pasteles{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 2rem;
+        }
+        .pastel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer{
+            text-align: center;
+        }
+        .formulario{
+            background-color: blueviolet;
+            width: min( 60rem, 100%);
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+        .formulario fieldset{
+            border: none;
+        }
+        .formulario legend{
+            text-align: center;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        .campo{
+            margin-bottom: 1rem;
+        }
+
+        .campo label{
+            font-weight: bold;
+            margin-bottom: .5rem;
+            display: block;
+        }
+
+        .campo textarea{
+            height: 14rem;
+        }
+
+        .input-text{
+            width: 90%;
+            border: none;
+            padding: 1.5rem;
+            border-radius: .5rem;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="img/Logo.png" width="200px" height="220px"><br>
+        <h1 class="titulo">Siempre endulzando tu dia</h1>
+    </header>
+
+   
+
+    <main class="contenedor">
+        <h2 class="titulo">Pasteles</h2>
+        <div class="pasteles">
+            <section class="pastel">
+                <img src="img/chocolate.jpg" width="200px" height="200px">
+                <p>Chocolate</p>
+                <p>$100.00</p>
+            </section> 
+            
+            <section class="pastel">
+                <img src="img/vainilla.jpg" width="200px" height="200px">
+                <p>Vainilla</p>
+                <p>$200.00</p>
+            </section> 
+
+            <section class="pastel">
+                <img src="img/tresLeches.jpg" width="200px" height="200px">
+                <p>Tres leches</p>
+                <p>$250.00</p>
+            </section>
+
+            <section class="pastel">
+                <img src="img/fresa.jpg" width="200px" height="200px">
+                <p>Fresa</p>
+                <p>$300.00</p>
+            </section> 
+
+            <section class="pastel">
+                <img src="img/zanahoria.jpg" width="200px" height="200px">
+                <p>Zanahoria</p>
+                <p>$350.00</p>
+            </section> 
+
+            <section class="pastel">
+                <img src="img/limon.jpg" width="200px" height="200px">
+                <p>Limon</p>
+                <p>$280.00</p>
+            </section> 
+        </div>
+    </main>
+
+    <div class="contenedor">
+    <h2 class="titulo">Decoraciones</h2>
+        <div class="pasteles">
+            <section class="pastel">
+                <img src="img/vela.jpg" width="200px" height="200px">
+                <p>Vela tradicional</p>
+                <p>$25.00</p>
+            </section> 
+            
+            <section class="pastel">
+                <img src="img/velaDos.jpg" width="200px" height="200px">
+                <p>Vela de numero</p>
+                <p>$45.00</p>
+            </section> 
+
+            <section class="pastel">
+                <img src="img/muneco.jpg" width="200px" height="200px">
+                <p>Muñeco de pastel</p>
+                <p>$80.00</p>
+            </section>
+
+            <section class="pastel">
+                <img src="img/fruta.jpg" width="200px" height="200px">
+                <p>Fruta extra</p>
+                <p>$50.00</p>
+            </section> 
+
+            <section class="pastel">
+                <img src="img/chantilly.jpg" width="200px" height="200px">
+                <p>Chantilly</p>
+                <p>$80.00</p>
+            </section> 
+
+            <section class="pastel">
+                <img src="img/limon.jpg" width="200px" height="200px">
+                <p>Limon</p>
+                <p>$280.00</p>
+            </section> 
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <section>
+        <form class="formulario">
+            <fieldset>
+                <legend>Realiza tu pedido llenando todos los campos</legend>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre</label>
+                        <input class="input-text-uno" type="text" placeholder="Tu nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label>Telefono</label>
+                        <input class="input-text-uno" type="tel" placeholder="Tu telefono">
+                    </div>
+    
+                    <div class="campo">
+                        <label>Correo</label>
+                        <input class="input-text" type="email" placeholder="Tu email">
+                    </div>
+    
+                    <div class="campo">
+                        <label>Descripcion general del pastel</label>
+                        <textarea class="input-text"></textarea>
+                    </div> 
+
+                    <div class="campo">
+                        <label>Elige el sabor del pastel</label>
+                        <select id="pasteles" name="pastel">
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Vainilla">Vainilla</option>
+                            <option value="Tres leches">Tres leches</option>
+                            <option value="Fresa">Fresa</option>
+                            <option value="Zanahoria">Zanahoria</option>
+                            <option value="Limon">Limon</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label>Elige alguna decoracion</label>
+                        <select id="decoracion" name="decoracion">
+                            <option value="Vela tradicional">Vela tradicional</option>
+                            <option value="Vela de numero">Vela de numero</option>
+                            <option value="Muneco">Muñeco de pastel</option>
+                            <option value="Fruta extra">Fruta extra</option>
+                            <option value="Chantilly extra">Chantilly extra</option>
+                        </select>
+                    </div>
+                    
+                    <input class="boton wd-100" type="submit" value="Hacer pedido">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        <h3>Direccion: Calle 5 de mayo, Av. Pantitla Col. Neza</h3>
+        <h3>Telefono: 55 58559090</h3>
+        <h3>Horarios de atencion: Abierto de Lunes-Viernes de 10:00 a 19:00. Sabado y Domingo de 9:00 a 20:00.</h3>
+    </footer>
+</body>
+</html>
